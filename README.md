@@ -108,8 +108,8 @@ I wanted to achieve an architecture that would:
 With these reasons in mind, I've decided to follow a *Domain-Driven Design*,
 where the following layers are stacked together:
 
-* API - Receives HTTP requests and passes down Command objects, that tell what
-commands the robot must execute, to the domain layer.
+* API - Controllers receive HTTP requests that validate parameters and pass
+down actions to services in the lower layer, i.e. domain layer, through DTOs.
 
 * Domain layer - This layer keeps the logic that applies to the underlying
 models, bounded in contexts about the many operations the system can do. Every
